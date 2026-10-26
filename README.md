@@ -77,11 +77,10 @@ MODEL_PATH = "JehnenS/FinTextSim"
 
 # 2. Alternative: Broad general-purpose semantic retrieval
 # MODEL_PATH = "BAAI/bge-base-en-v1.5"
+```
 
-##  Our project roadmap
 
-
----
+### ⚙️  Our project roadmap
 
 ### ① Understand the problem and the data
  Bank of England problem  
@@ -241,5 +240,5 @@ We will investigate:
 > **What was said? → Who said it? → What were they talking about? →  
 > How was it expressed? → What concerns can we extract? → What changed? →  
 > Does this provide useful additional insight about the firm?**
-```
+
 
