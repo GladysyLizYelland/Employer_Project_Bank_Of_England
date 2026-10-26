@@ -128,12 +128,12 @@ MODEL_PATH = "JehnenS/FinTextSim"
 **Output:** structured speaker turns and Q&A pairs
 
 ---
-###  ④ Preprocess the data to be used for Bertopic and Finbert - 
+###  ④ Preprocess the data to be used for Bertopic and Finbert 
 
  Find any duplicate data - and drop it and log
 ↓  
  Find any missing answers or questions - and drop it and log
-↓ 
+↓  
  Clean text from any common greeting words, html encoding etc
 ↓ 
  Expanded contractions
