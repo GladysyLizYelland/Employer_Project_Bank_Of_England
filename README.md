@@ -128,16 +128,17 @@ MODEL_PATH = "JehnenS/FinTextSim"
 **Output:** structured speaker turns and Q&A pairs
 
 ---
-###  ④ Preprocess the data to be used for Bertopic and Finbert 
 
- Find any duplicate data - and drop it and log
+### ④ Preprocess the data to be used for Bertopic and Finbert 
+
+Find any duplicate data - and drop it and log 
 ↓  
- Find any missing answers or questions - and drop it and log
+ Find any missing answers or questions - and drop it and log  
 ↓  
  Clean text from any common greeting words, html encoding etc
-↓ 
- Expanded contractions
-↓ 
+↓  
+ Expanded contractions 
+↓  
  Remove common stops words but protect from certain words such Increase, Decrease
 ↓ 
  Expand financial acroymns 
@@ -194,8 +195,7 @@ valid Topics and Sentiments
 
 ---
 
-###  ⑦ Extract and summarise insight with an LLM
-**Notebook 6**
+###  ⑧ Extract and summarise insight with an LLM
 
  Analyst question →  Management response  
 ↓  
@@ -215,7 +215,7 @@ evidence-grounded information?*
 
 ---
 
-###  ⑧ consolidate - Bring the signals together
+###  ⑨ consolidate - Bring the signals together
 
 
 In the final stage, we bring together the different signals extracted from the
