@@ -128,7 +128,21 @@ MODEL_PATH = "JehnenS/FinTextSim"
 **Output:** structured speaker turns and Q&A pairs
 
 ---
+### ③ Turn transcripts into conversations -structured data - by parsing it
 
+ Complete transcripts  
+↓  
+ Separate prepared remarks and Q&A  
+↓  
+ Identify speakers  
+↓  
+ Analyst vs management  
+↓  
+ Analyst question →  Management response
+
+**Output:** structured speaker turns and Q&A pairs
+
+---
 ### ④ Preprocess the data to be used for Bertopic and Finbert 
 
  Find any duplicate data - and drop it and log  
