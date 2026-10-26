@@ -131,15 +131,15 @@ MODEL_PATH = "JehnenS/FinTextSim"
 
 ### ④ Preprocess the data to be used for Bertopic and Finbert 
 
-Find any duplicate data - and drop it and log 
+ Find any duplicate data - and drop it and log 
 ↓  
  Find any missing answers or questions - and drop it and log  
 ↓  
- Clean text from any common greeting words, html encoding etc
+ Clean text from any common greeting words, html encoding etc 
 ↓  
  Expanded contractions 
 ↓  
- Remove common stops words but protect from certain words such Increase, Decrease
+ Remove common stops words but protect from certain words such Increase, Decrease 
 ↓ 
  Expand financial acroymns 
 
