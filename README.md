@@ -177,24 +177,45 @@ MODEL_PATH = "JehnenS/FinTextSim"
 
 ###  ⑦ Validate and Fine tune Bert topic and FinBert
 
-Validate the Bert topic - by looking at the to 5 -10 words and ask can name in one topic.
-or do they belong in that topic.
+---
+
+### 1. Semantic Validation (Human-in-the-Loop)
+* **Topic Labeling:** Look at the top 5–10 words and verify if they can be named under a single topic.
+* **Word Alignment:** Confirm whether individual keywords logically belong together in that topic.
+
 ↓ 
-rerun with a different seeds and compare the topic assignments, if change it is unreliable
+
+#### 2. Stability & Seeding Analysis
+* **Seed Comparisons:** Rerun the model using different random seeds.
+* **Reliability Check:** Compare the topic assignments across runs; if clusters change drastically, the configuration is unreliable.
+
 ↓ 
-Coherence and diversity (automatic scores) : 
+
+#### 3. Automated Quality Metrics (Coherence & Diversity)
+* **Coherence:** Check if the top keywords actively appear together in the source text.
+* **Diversity:** Measure how many top words are completely unique across topics (ensuring no duplicate concepts).
+
 ↓ 
-do top words appear in the text?  Coherence
+
+#### 4. Structural & Visual Analysis
+* **Outlier Mapping:** Check the structure and percentage of documents sitting as outliers.
+* **Topic Sizes:** Analyze the volume of documents per cluster to ensure balanced distributions.
+* **Hierarchy Inspection:** Use `visualize_hierarchy()` to map out and audit cluster distances.
+
 ↓ 
-How many top words are unique across topics - Diversity - not duplicates
+
+#### 5. LLM-in-the-Loop Evaluation
+* **Automated Judging:** Use a Large Language Model (LLM) to evaluate and judge topic relevance.
+* **Heatmap Matrix:** Compare the LLM evaluation scores on a matrix heatmap to isolate weak spots.
+
 ↓ 
-check structure like percentage that seat as outliers, topic sizes and look at the visulize_hierarchy
+
+#### 6. FinBERT Validation & Tuning
+* **Sentiment Audit:** Validate the FinBERT classification results against financial domain expectations.
+* **Model Optimization:** Fine-tune the weights if accuracy drifts from benchmarks.
+
 ↓ 
-could use an llm to judge topics and compare them on a heatmap
-↓ 
-Validate Fin bert results and fine tune.
-↓ 
-valid Topics and Sentiments
+**Output:** valid bert topics and finbert sentiments
 
 ---
 
