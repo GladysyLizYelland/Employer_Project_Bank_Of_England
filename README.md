@@ -131,7 +131,7 @@ MODEL_PATH = "JehnenS/FinTextSim"
 
 ### ④ Preprocess the data to be used for Bertopic and Finbert 
 
- Find any duplicate data - and drop it and log 
+ Find any duplicate data - and drop it and log  
 ↓  
  Find any missing answers or questions - and drop it and log  
 ↓  
