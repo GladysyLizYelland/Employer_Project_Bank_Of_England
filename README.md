@@ -129,21 +129,44 @@ MODEL_PATH = "JehnenS/FinTextSim"
 **Output:** structured speaker turns and Q&A pairs
 
 ---
-### ④ Preprocess the data to be used for Bertopic and Finbert 
+### ④ Preprocess Data for BERTopic and FinBERT
 
- Find any duplicate data - and drop it and log  
-↓  
- Find any missing answers or questions - and drop it and log  
-↓  
- Clean text from any common greeting words, html encoding etc 
-↓  
- Expanded contractions 
-↓  
- Remove common stops words but protect from certain words such Increase, Decrease 
+ Deduplication
+* **Duplicate Detection:** Identify identical or redundant data rows across the dataset.
+* **Purge & Track:** Drop all duplicate entries and log the total number of removed records.
+
 ↓ 
- Expand financial acroymns 
 
-**Output:** structured Clean speaker turns and Q&A pairs text
+ Missing Value Imputation
+* **Completeness Check:** Scan for missing fields across questions or answers.
+* **Purge & Track:** Drop records containing incomplete Q&A pairs and log the missing rows.
+
+↓ 
+
+ Noise Reduction & Text Cleaning
+* **Greeting Removal:** Clean text by stripping out common greeting phrases (e.g., "Hello", "Good morning").
+* **Character Decoding:** Resolve and decode HTML entities, artifacts, and unwanted formatting tags.
+
+↓ 
+
+ Contraction Expansion
+* **Text Standardization:** Expand standard English contractions (e.g., convert "don't" to "do not", "we're" to "we are") to ensure uniform tokenization.
+
+↓ 
+
+ Domain-Specific Stop Word Filtering
+* **Selective Filtering:** Remove generic English stop words to reduce noise for topic modeling.
+* **Context Protection:** Protect and retain critical sentiment-bearing financial keywords (e.g., *Increase*, *Decrease*).
+
+↓ 
+
+ Financial Acronym Expansion
+* **Abbreviation Mapping:** Standardise industry abbreviations into full text forms (e.g., converting "YoY" to "Year over Year", "EPS" to "Earnings Per Share") to preserve embedding context.
+
+↓ 
+
+ 🎉 Output: Structured Clean Speaker Turns and Q&A Pairs Text
+
 
 ---
 ### ⑤  Measure financial sentiment - thru finbert
