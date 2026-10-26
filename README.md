@@ -172,6 +172,26 @@ expand financial acroymns
 **Question:** *What are analysts and management actually talking about?*
 
 ---
+###  ⑦ Validate and Fine tune Bert topic and FinBert
+
+Validate the Bert topic - by looking at the to 5 -10 words and ask can name in one topic.
+or do they belong in that topic.
+↓ 
+rerun with a different seeds and compare the topic assignments, if change it is unreliable
+↓ 
+Coherence and diversity (automatic scores) : 
+  -> do top words appear in the text?  Coherence
+  -> How many top words are unique across topics - Diversity - not duplicates
+↓ 
+check structure like percentage that seat as outliers, topic sizes and look at the visulize_hierarchy
+↓ 
+could use an llm to judge topics and compare them on a heatmap
+↓ 
+Validate Fin bert results and fine tune.
+↓ 
+valid Topics and Sentiments
+
+---
 
 ###  ⑦ Extract and summarise insight with an LLM
 **Notebook 6**
