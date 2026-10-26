@@ -80,7 +80,7 @@ MODEL_PATH = "JehnenS/FinTextSim"
 ```
 
 
-### ⚙️  Our project roadmap
+### 🚀  Our project roadmap
 
 ### ① Understand the problem and the data
  Bank of England problem  
