@@ -194,7 +194,7 @@ evidence-grounded information?*
 
 ---
 
-###  ⑧ Bring the signals together
+###  ⑧ consolidate - Bring the signals together
 
 
 In the final stage, we bring together the different signals extracted from the
