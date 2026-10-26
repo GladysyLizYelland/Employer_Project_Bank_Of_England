@@ -286,7 +286,7 @@ We will investigate:
 | Financial sentiment | **FinBERT** | Understand sentiment in financial language |
 | Semantic representation | **Sentence Transformers** | Represent passages according to meaning rather than individual words |
 | Topic discovery | **BERTopic** | Discover recurring themes in analyst and management discussions |
-| LLM extraction | **Gemma 3 4B Instruct** | Extract and summarise structured information from Q&A exchanges |
+| LLM extraction | **Gemma, Fingpt etc** | Extract and summarise structured information from Q&A exchanges |
 
 ---
 
