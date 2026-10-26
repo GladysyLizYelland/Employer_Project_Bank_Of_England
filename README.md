@@ -182,8 +182,10 @@ or do they belong in that topic.
 rerun with a different seeds and compare the topic assignments, if change it is unreliable
 ↓ 
 Coherence and diversity (automatic scores) : 
-  -> do top words appear in the text?  Coherence
-  -> How many top words are unique across topics - Diversity - not duplicates
+↓ 
+do top words appear in the text?  Coherence
+↓ 
+How many top words are unique across topics - Diversity - not duplicates
 ↓ 
 check structure like percentage that seat as outliers, topic sizes and look at the visulize_hierarchy
 ↓ 
