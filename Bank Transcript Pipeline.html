@@ -1,0 +1,254 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Bank Transcript Pipeline</title>
+<style>
+/* Layout concept: a single vertical flow diagram (start pill -> 8 stages,
+   with one parallel split/merge for BERTopic+FinBERT) framed by a goal
+   statement above and a start/end summary below. */
+:root{
+  --bg:#f7f6f1;
+  --surface:#ffffff;
+  --surface-2:#eaf3f1;
+  --border:#dfe3e0;
+  --fg:#1c2b39;
+  --muted:#5a6570;
+  --accent:#2f7a72;
+  --accent-2:#c96a2e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11181d;
+    --surface:#182228;
+    --surface-2:#16262a;
+    --border:#2b383d;
+    --fg:#eef2f0;
+    --muted:#9db0ab;
+    --accent:#5cc2b0;
+    --accent-2:#e59257;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11181d;
+  --surface:#182228;
+  --surface-2:#16262a;
+  --border:#2b383d;
+  --fg:#eef2f0;
+  --muted:#9db0ab;
+  --accent:#5cc2b0;
+  --accent-2:#e59257;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:"IBM Plex Sans",Arial,sans-serif;
+  padding-inline:20px;
+  padding-block:40px 64px;
+}
+main{max-width:920px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+
+header{display:flex;flex-direction:column;gap:8px}
+.eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--accent);margin:0;
+}
+h1{font-size:clamp(28px,5vw,40px);font-weight:700;line-height:1.15;margin:0}
+.subtitle{font-size:17px;color:var(--muted);line-height:1.5;margin:0;max-width:62ch}
+
+.goal{
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-left:5px solid var(--accent);
+  border-radius:14px;
+  padding:20px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.goal .label{
+  font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--accent);
+}
+.goal p{margin:0;font-size:16px;line-height:1.55}
+
+figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.diagram-scroll{
+  overflow-x:auto;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--surface);
+  padding:12px;
+}
+.diagram-scroll svg{display:block;width:900px;max-width:none;height:auto}
+figcaption{font-size:14px;color:var(--muted);line-height:1.5;max-width:70ch}
+
+.endpoints{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(240px,1fr));
+  gap:16px;
+}
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:20px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0;
+}
+.card .tag{
+  font-family:"JetBrains Mono",monospace;
+  font-size:12px;font-weight:700;letter-spacing:1px;
+  color:var(--accent-2);
+}
+.card h3{margin:0;font-size:19px;font-weight:700}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+
+.svg-label-title{font:700 14px "IBM Plex Sans",Arial,sans-serif;fill:currentColor}
+.svg-label-sub{font:500 12px "JetBrains Mono",monospace;fill:currentColor;opacity:.72}
+.svg-label-arrow{font:600 11px "IBM Plex Sans",Arial,sans-serif;fill:currentColor;opacity:.75}
+.svg-label-pill{font:700 13px "IBM Plex Sans",Arial,sans-serif;fill:currentColor}
+
+@media (max-width: 480px){
+  .endpoints{grid-template-columns:1fr}
+}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+
+<main>
+
+  <header>
+    <p class="eyebrow">BoE Capstone — Technical Pipeline</p>
+    <h1>Bank Transcript Pipeline</h1>
+    <p class="subtitle">How 679 raw PDF earnings-call transcripts become a validated, bank-by-bank signal of what is being said and how it sounds.</p>
+  </header>
+
+  <section class="goal">
+    <p class="label">Main goal</p>
+    <p>Turn unstructured bank earnings-call PDFs into a <strong>validated, quantified</strong> view of what each bank talks about and the tone it uses — evidence a data science team can turn into business recommendations for the Bank of England, not just raw model output.</p>
+  </section>
+
+  <figure>
+    <div class="diagram-scroll">
+      <svg viewBox="0 0 900 1300" role="img" aria-label="Flow diagram: raw PDF transcripts go through the parser, preprocessing, then BERTopic and FinBERT running independently in parallel, which merge into an aggregated table, then validation, fine-tuning, cross-bank benchmarking, LLM summarisation, and finally a report, deck and presentation.">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+
+        <!-- START pill -->
+        <rect x="200" y="6" width="500" height="54" rx="27" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="28" text-anchor="middle" class="svg-label-pill">START — 679 raw PDF transcripts</text>
+        <text x="450" y="46" text-anchor="middle" class="svg-label-sub">JPMorgan + Citigroup, quarterly earnings calls</text>
+
+        <line x1="450" y1="60" x2="450" y2="98" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 1. Parser -->
+        <rect x="150" y="100" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="132" text-anchor="middle" class="svg-label-title">1 · Parser v1.7.1</text>
+        <text x="450" y="152" text-anchor="middle" class="svg-label-sub" opacity="0.85">reads PDFs, OCR if needed, IDs bank + speakers</text>
+        <text x="450" y="170" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → analysis_qa.parquet (679 docs, 0 unknown bank)</text>
+
+        <line x1="450" y1="186" x2="450" y2="224" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 2. Preprocessing -->
+        <rect x="150" y="226" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="258" text-anchor="middle" class="svg-label-title">2 · Preprocessing</text>
+        <text x="450" y="278" text-anchor="middle" class="svg-label-sub" opacity="0.85">fixes ligature glyphs, strips boilerplate/disclaimers, drops short text</text>
+        <text x="450" y="296" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → clean analysis_text column</text>
+
+        <!-- split -->
+        <line x1="450" y1="312" x2="450" y2="330" stroke="currentColor" stroke-width="1.5"/>
+        <text x="465" y="326" class="svg-label-arrow">run independently</text>
+        <line x1="450" y1="330" x2="290" y2="358" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="450" y1="330" x2="610" y2="358" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 3a. BERTopic -->
+        <rect x="150" y="360" width="280" height="100" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="290" y="392" text-anchor="middle" class="svg-label-title">3a · BERTopic</text>
+        <text x="290" y="412" text-anchor="middle" class="svg-label-sub" opacity="0.85">what is it about?</text>
+        <text x="290" y="430" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → topic_id</text>
+        <text x="290" y="446" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">+ topic keywords</text>
+
+        <!-- 3b. FinBERT -->
+        <rect x="470" y="360" width="280" height="100" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="610" y="392" text-anchor="middle" class="svg-label-title">3b · FinBERT</text>
+        <text x="610" y="412" text-anchor="middle" class="svg-label-sub" opacity="0.85">how does it sound?</text>
+        <text x="610" y="430" text-anchor="middle" class="svg-label-sub" fill="var(--accent-2)" opacity="1">output → finbert_label</text>
+        <text x="610" y="446" text-anchor="middle" class="svg-label-sub" fill="var(--accent-2)" opacity="1">+ signed_score (-1..+1)</text>
+
+        <!-- merge -->
+        <line x1="290" y1="460" x2="450" y2="488" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <line x1="610" y1="460" x2="450" y2="488" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <text x="465" y="480" class="svg-label-arrow">joined on row id</text>
+
+        <!-- 4. Aggregation -->
+        <rect x="150" y="490" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="522" text-anchor="middle" class="svg-label-title">4 · Aggregate</text>
+        <text x="450" y="542" text-anchor="middle" class="svg-label-sub" opacity="0.85">group by bank · quarter · topic, average sentiment</text>
+        <text x="450" y="560" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → sentiment_by_topic_by_bank_quarter table</text>
+
+        <line x1="450" y1="576" x2="450" y2="614" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 5. Validation -->
+        <rect x="150" y="616" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="648" text-anchor="middle" class="svg-label-title">5 · Validate</text>
+        <text x="450" y="668" text-anchor="middle" class="svg-label-sub" opacity="0.85">hand-label ~60-100 pairs, compare to model output</text>
+        <text x="450" y="686" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → agreement / accuracy score</text>
+
+        <line x1="450" y1="702" x2="450" y2="740" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 6. Fine-tuning -->
+        <rect x="150" y="742" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="774" text-anchor="middle" class="svg-label-title">6 · Fine-tune</text>
+        <text x="450" y="794" text-anchor="middle" class="svg-label-sub" opacity="0.85">adapt FinBERT on the hand-labelled sample</text>
+        <text x="450" y="812" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → tuned model + before/after accuracy</text>
+
+        <line x1="450" y1="828" x2="450" y2="866" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 7. Cross-bank benchmarking -->
+        <rect x="150" y="868" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="900" text-anchor="middle" class="svg-label-title">7 · Compare banks</text>
+        <text x="450" y="920" text-anchor="middle" class="svg-label-sub" opacity="0.85">JPMorgan vs Citigroup, same topic, across quarters</text>
+        <text x="450" y="938" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → trend charts + significance test</text>
+
+        <line x1="450" y1="954" x2="450" y2="992" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- 8. LLM summarisation -->
+        <rect x="150" y="994" width="600" height="86" rx="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="450" y="1026" text-anchor="middle" class="svg-label-title">8 · Summarise (LLM)</text>
+        <text x="450" y="1046" text-anchor="middle" class="svg-label-sub" opacity="0.85">Falcon-7B turns the numbers into plain-language findings</text>
+        <text x="450" y="1064" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">output → narrative insight per bank / quarter / topic</text>
+
+        <line x1="450" y1="1080" x2="450" y2="1118" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+        <!-- END pill -->
+        <rect x="130" y="1120" width="640" height="100" rx="16" fill="var(--surface-2)" stroke="var(--accent)" stroke-width="2"/>
+        <text x="450" y="1154" text-anchor="middle" class="svg-label-pill">END — report + deck + live presentation</text>
+        <text x="450" y="1174" text-anchor="middle" class="svg-label-sub" opacity="0.85">1,500-word PDF, code, slides, 15-min presentation</text>
+        <text x="450" y="1194" text-anchor="middle" class="svg-label-sub" fill="var(--accent)" opacity="1">validated, bank-by-bank business recommendations</text>
+      </svg>
+    </div>
+    <figcaption>The full pipeline from raw PDF transcripts to a validated dataset: BERTopic and FinBERT run independently on the same cleaned text, then their outputs are joined into one table before validation, fine-tuning, cross-bank comparison and LLM summarisation.</figcaption>
+  </figure>
+
+  <section class="endpoints">
+    <div class="card">
+      <p class="tag">INPUT</p>
+      <h3>Where it starts</h3>
+      <p>679 official PDF earnings-call transcripts from JPMorgan and Citigroup, spanning several years of quarters — unstructured text, no labels, no topics, no sentiment.</p>
+    </div>
+    <div class="card">
+      <p class="tag">OUTPUT</p>
+      <h3>Where it ends</h3>
+      <p>A written report, code, slide deck and a 15-minute live presentation built on a validated table of sentiment and topic per bank per quarter — the evidence base for the business recommendations.</p>
+    </div>
+  </section>
+
+</main>
+
+</body></html>
