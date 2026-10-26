@@ -128,7 +128,7 @@ MODEL_PATH = "JehnenS/FinTextSim"
 **Output:** structured speaker turns and Q&A pairs
 
 ---
-###  ⑤ Preprocess the data to be used for Bertopic and Finbert - 
+###  ④ Preprocess the data to be used for Bertopic and Finbert - 
 
 Find any duplicate data - and drop it and log
 ↓  
@@ -136,10 +136,15 @@ Find any missing answers or questions - and drop it and log
 ↓ 
 clean text from any common greeting words, html encoding etc
 ↓ 
+expanded contractions
+↓ 
+remove common stops words but protect from certain words such Increase, Decrease
+↓ 
+expand financial acroymns 
 **Output:** structured Clean speaker turns and Q&A pairs text
 
 ---
-### ⑥  Measure financial sentiment - thru finbert to
+### ⑤  Measure financial sentiment - thru finbert to
 
  Analyst questions +  Management responses  
 ↓  
@@ -153,8 +158,8 @@ clean text from any common greeting words, html encoding etc
 
 ---
 
-### ⑦  Discover the main themes - topics using Bertopib
-**Notebook 5**
+### ⑥  Discover the main themes - topics using Bertopib
+
 
  Speaker turns / Q&A pairs  
 ↓  
@@ -168,7 +173,7 @@ clean text from any common greeting words, html encoding etc
 
 ---
 
-###7 Extract and summarise insight with an LLM
+###  ⑦ Extract and summarise insight with an LLM
 **Notebook 6**
 
  Analyst question →  Management response  
@@ -189,7 +194,7 @@ evidence-grounded information?*
 
 ---
 
-### 8 Bring the signals together
+###  ⑧ Bring the signals together
 
 
 In the final stage, we bring together the different signals extracted from the
