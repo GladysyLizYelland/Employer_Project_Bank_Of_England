@@ -77,5 +77,169 @@ MODEL_PATH = "JehnenS/FinTextSim"
 
 # 2. Alternative: Broad general-purpose semantic retrieval
 # MODEL_PATH = "BAAI/bge-base-en-v1.5"
+
+##  Our project roadmap
+
+
+---
+
+### ① Understand the problem and the data
+ Bank of England problem  
+↓  
+ What information is contained in quarterly results?  
+↓  
+ Why might analyst–management conversations be informative?  
+↓  
+ Define what we want to investigate
+
+**Output:** a clear analytical question and data strategy
+
+---
+
+### ② Acquire, structure and explore the transcripts
+
+ Investor Relations websites  
+↓  
+ Earnings-call transcript PDFs  
+↓  
+ Document manifest  
+↓  
+ Page-level text  
+↓  
+ Complete transcript documents  
+↓  
+ Extraction and data-quality checks
+
+**Output:** a clean, traceable corpus of quarterly-results transcripts
+
+---
+
+### ③ Turn transcripts into conversations -structured data - by parsing it
+
+ Complete transcripts  
+↓  
+ Separate prepared remarks and Q&A  
+↓  
+ Identify speakers  
+↓  
+ Analyst vs management  
+↓  
+ Analyst question →  Management response
+
+**Output:** structured speaker turns and Q&A pairs
+
+---
+### 4 Preprocess the data - clean it from common greeting words etc
+
+### 5 Measure financial sentiment - thru finbert to
+
+ Analyst questions +  Management responses  
+↓  
+ **FinBERT**  
+↓  
+ Positive |  Neutral |  Negative  
+↓  
+ Compare sentiment by speaker, topic and reporting period
+
+**Question:** *Where do analysts appear concerned, and how does management respond?*
+
+---
+
+### 6 Discover the main themes - topics using Bertopib
+**Notebook 5**
+
+ Speaker turns / Q&A pairs  
+↓  
+ **Sentence Transformers** — semantic embeddings  
+↓  
+ **BERTopic** — topic discovery  
+↓  
+ Credit | Capital | Costs | Liquidity | Growth | ...
+
+**Question:** *What are analysts and management actually talking about?*
+
+---
+
+###7 Extract and summarise insight with an LLM
+**Notebook 6**
+
+ Analyst question →  Management response  
+↓  
+ **such as Gemma 3, FinGPT etc**  
+↓  
+ Structured extraction
+
+`Topic`  
+`Analyst concern`  
+`Management response`  
+`Financial metrics mentioned`  
+`Forward-looking statements`  
+`Risk / uncertainty`
+
+**Question:** *Can an LLM turn complex financial conversations into structured,
+evidence-grounded information?*
+
+---
+
+### 8 Bring the signals together
+
+
+In the final stage, we bring together the different signals extracted from the
+earnings-call Q&A:
+
+| Signal | What we have learned |
+|---|---|
+|  **Topics** | What analysts and management are talking about |
+|  **Sentiment** | How positively, neutrally or negatively issues are discussed |
+|  **Q&A behaviour** | What analysts ask and how management responds |
+|  **LLM extraction** | Specific concerns, metrics, risks and uncertainty |
+
+We then examine how these signals **change across reporting periods**.
+
+**Topics + Sentiment + Q&A behaviour + LLM extraction**
+
+↓
+
+**Changes across reporting periods**
+
+↓
+
+###  Regulatory insight
+
+We will investigate:
+
+**What are analysts concerned about?**  
+↓  
+**How does management respond?**  
+↓  
+**Which topics are becoming more prominent or negative?**  
+↓  
+**What has changed relative to previous reporting periods?**  
+↓  
+**Do quarterly results announcements provide additional insight about the firm?**
+
+---
+
+###  Our main NLP toolkit
+
+| Method | Model / approach | Why are we using it? |
+|---|---|---|
+| Text structuring | Python + regular expressions | Turn unstructured transcripts into analysable conversations |
+| Financial sentiment | **FinBERT** | Understand sentiment in financial language |
+| Semantic representation | **Sentence Transformers** | Represent passages according to meaning rather than individual words |
+| Topic discovery | **BERTopic** | Discover recurring themes in analyst and management discussions |
+| LLM extraction | **Gemma 3 4B Instruct** | Extract and summarise structured information from Q&A exchanges |
+
+---
+
+> ### The idea connecting the whole project
+>
+> We are not applying NLP models simply because they are available.
+>
+> Each stage helps us answer a progressively more useful question:
+>
+> **What was said? → Who said it? → What were they talking about? →  
+> How was it expressed? → What concerns can we extract? → What changed? →  
+> Does this provide useful additional insight about the firm?**
 ```
 
