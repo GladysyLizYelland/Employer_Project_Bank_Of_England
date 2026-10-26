@@ -174,6 +174,7 @@ MODEL_PATH = "JehnenS/FinTextSim"
 **Question:** *What are analysts and management actually talking about?*
 
 ---
+
 ###  ⑦ Validate and Fine tune Bert topic and FinBert
 
 Validate the Bert topic - by looking at the to 5 -10 words and ask can name in one topic.
