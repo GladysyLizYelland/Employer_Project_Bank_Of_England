@@ -179,38 +179,38 @@ MODEL_PATH = "JehnenS/FinTextSim"
 
 ---
 
-### 1. Semantic Validation (Human-in-the-Loop)
+ Semantic Validation (Human-in-the-Loop)
 * **Topic Labeling:** Look at the top 5–10 words and verify if they can be named under a single topic.
 * **Word Alignment:** Confirm whether individual keywords logically belong together in that topic.
 
 ↓ 
 
-#### 2. Stability & Seeding Analysis
+ Stability & Seeding Analysis
 * **Seed Comparisons:** Rerun the model using different random seeds.
 * **Reliability Check:** Compare the topic assignments across runs; if clusters change drastically, the configuration is unreliable.
 
 ↓ 
 
-#### 3. Automated Quality Metrics (Coherence & Diversity)
+ Automated Quality Metrics (Coherence & Diversity)
 * **Coherence:** Check if the top keywords actively appear together in the source text.
 * **Diversity:** Measure how many top words are completely unique across topics (ensuring no duplicate concepts).
 
 ↓ 
 
-#### 4. Structural & Visual Analysis
+ Structural & Visual Analysis
 * **Outlier Mapping:** Check the structure and percentage of documents sitting as outliers.
 * **Topic Sizes:** Analyze the volume of documents per cluster to ensure balanced distributions.
 * **Hierarchy Inspection:** Use `visualize_hierarchy()` to map out and audit cluster distances.
 
 ↓ 
 
-#### 5. LLM-in-the-Loop Evaluation
+ LLM-in-the-Loop Evaluation
 * **Automated Judging:** Use a Large Language Model (LLM) to evaluate and judge topic relevance.
 * **Heatmap Matrix:** Compare the LLM evaluation scores on a matrix heatmap to isolate weak spots.
 
 ↓ 
 
-#### 6. FinBERT Validation & Tuning
+ FinBERT Validation & Tuning
 * **Sentiment Audit:** Validate the FinBERT classification results against financial domain expectations.
 * **Model Optimization:** Fine-tune the weights if accuracy drifts from benchmarks.
 
