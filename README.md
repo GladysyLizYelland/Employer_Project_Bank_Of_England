@@ -144,7 +144,7 @@ expand financial acroymns
 **Output:** structured Clean speaker turns and Q&A pairs text
 
 ---
-### ⑤  Measure financial sentiment - thru finbert to
+### ⑤  Measure financial sentiment - thru finbert
 
  Analyst questions +  Management responses  
 ↓  
@@ -158,7 +158,7 @@ expand financial acroymns
 
 ---
 
-### ⑥  Discover the main themes - topics using Bertopib
+### ⑥  Discover the main themes, topics, thru using Bert topic
 
 
  Speaker turns / Q&A pairs  
