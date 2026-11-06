@@ -32,6 +32,7 @@ Provide a structured dashboard or reporting format for key stakeholders.
 │   └── topics/                  # Final processed text mapped with dominant themes/topics
 │
 ├── notebooks/                   # R&D and analysis environment
+|   |__ import/                  # import pdf transcripts and vides into the raw directory
 │   ├── parser/                  # Raw text extraction and structured parsing pipelines
 │   ├── eda/                     # Exploratory Data Analysis notebooks
 │   ├── preprocessing/           # Text cleansing, tokenisation, and normalization routines
@@ -45,7 +46,7 @@ Provide a structured dashboard or reporting format for key stakeholders.
 ├── reports/                     # Generated insights, final documentation, and project findings
 ├── requirements.txt             # Python dependencies and library versions
 ├── .gitignore                   # Specified files and directories hidden from version control
-└── README.md                    # Project documentation
+└── README.md                    # Project documentation 
 ```
 
 ## 🤖 Embedding Model Selection
