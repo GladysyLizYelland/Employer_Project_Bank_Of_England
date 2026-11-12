@@ -45,6 +45,8 @@ Provide a structured dashboard or reporting format for key stakeholders.
 │
 ├── reports/                     # Generated insights, final documentation, and project findings
 ├── requirements.txt             # Python dependencies and library versions
+|- Banks_Transcript_MetaData.json # Configurations for downloading bank transcripts to their target folders.
+|
 ├── .gitignore                   # Specified files and directories hidden from version control
 └── README.md                    # Project documentation 
 ```
