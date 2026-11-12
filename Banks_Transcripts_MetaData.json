@@ -1,0 +1,753 @@
+{
+  "jpmorgan": {
+    "bank_name": "JPMorgan Chase & Co.",
+    "short_name": "JPM",
+    "base_file_path": "bank_data/raw/JPMorgan",
+    "base_ir_url": "https://www.jpmorganchase.com/ir/quarterly-earnings",
+    "quarters": {
+      "2026-Q3": {
+        "reporting_period": "Third Quarter 2026",
+        "quarter_folder": "2026/3Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2026Q3_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2026-10-13",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "3q26-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2023/1st-quarter/1q23-earnings-transcript.pdf",
+            "notes": "Third Quarter 2026 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2026-Q2": {
+        "reporting_period": "Second Quarter 2026",
+        "quarter_folder": "2026/2Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2026Q2_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2026-07-14",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "2q26-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+            "notes": "Second Quarter 2026 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2026-Q1": {
+        "reporting_period": "First Quarter 2026",
+        "quarter_folder": "2026/1Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2026Q1_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2026-04-14",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "1q26-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+            "notes": "First Quarter 2026 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2025-Q4": {
+        "reporting_period": "Fourth Quarter 2025",
+        "quarter_folder": "2025/4Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2025Q4_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2025-01-15",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "4q25-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+            "notes": "Fourth Quarter 2025 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2025-Q3": {
+        "reporting_period": "Third Quarter 2025",
+        "quarter_folder": "2025/3Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2025Q3_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2025-10-11",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "3q25-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+            "notes": "Third Quarter 2025 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2025-Q2": {
+        "reporting_period": "Second Quarter 2025",
+        "quarter_folder": "2025/2Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2025Q2_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2025-07-15",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "2q25-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/2nd-quarter/jpm-2q25-earnings-call-transcript.pdf",
+            "notes": "Second Quarter 2025 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2025-Q1": {
+        "reporting_period": "First Quarter 2025",
+        "quarter_folder": "2025/1Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2025Q1_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2025-04-11",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "1q25-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/1st-quarter/1q25-earnings-transcript.pdf",
+            "notes": "First Quarter 2025 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2024-Q4": {
+        "reporting_period": "Fourth Quarter 2024",
+        "quarter_folder": "2024/4Q",
+        "documents":[
+          {
+            "doc_id": "JPM_2024Q4_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2025-01-15",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "4q24-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/4th-quarter/4q24-earnings-transcript.pdf",
+            "notes": "Fourth Quarter 2024 Financial Results Earnings Call Transcript"
+       }
+      ]
+    },
+      "2024-Q3": {
+        "reporting_period": "Third Quarter 2024",
+        "announcement_date": "2024-10-11",
+        "quarter_folder": "2024/3Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2024Q3_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2024-10-11",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "3q24-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/jpmc-third-quarter-2024-earnings-conference-call-transcript.pdf",
+            "notes": "Third Quarter 2024 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2024-Q2": {
+        "reporting_period": "Second Quarter 2024",
+        "quarter_folder": "2024/2Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2024Q2_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2024-07-12",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "2q24-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/2nd-quarter/jpm-2q24-earnings-call-transcript-final.pdf",
+            "notes": "Second Quarter 2024 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2024-Q1": {
+        "reporting_period": "First Quarter 2024",
+        "quarter_folder": "2024/1Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2024Q1_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2024-04-12",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "1q24-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/1st-quarter/jpm-1q24-earnings-call-transcript.pdf",
+            "notes": "First Quarter 2024 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2023-Q4": {
+        "reporting_period": "Fourth Quarter 2023",
+        "announcement_date": "2024-01-12",
+        "quarter_folder": "2023/4Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2023Q4_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2024-01-12",
+            "subfolder": "Earnings_call_transcripts",
+        "filename": "4q23-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2023/4th-quarter/jpm-4q23-earnings-call-transcript.pdf",
+            "notes": "Fourth Quarter 2023 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2023-Q3": {
+        "reporting_period": "Third Quarter 2023",
+        "quarter_folder": "2023/3Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2023Q3_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2023-10-13",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "3q23-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2023/3rd-quarter/jpm-3q23-earnings-call-transcript.pdf",
+            "notes": "Third Quarter 2023 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2023-Q2": {
+        "reporting_period": "Second Quarter 2023",
+        "quarter_folder": "2023/2Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2023Q2_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2023-07-14",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "2q23-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2023/2nd-quarter/2q23-earnings-transcript.pdf",
+            "notes": "Second Quarter 2023 Financial Results Earnings Call Transcript"
+          }
+        ]
+      },
+      "2023-Q1": {
+        "reporting_period": "First Quarter 2023",
+        "quarter_folder": "2023/1Q",
+        "documents": [
+          {
+            "doc_id": "JPM_2023Q1_EARNINGS_CALL",
+            "document_type": "Earnings_Call_Transcript",
+            "transcript_format":"Hybrid_Management_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2023-04-14",
+            "subfolder": "Earnings_call_transcripts",
+            "filename": "1q23-earnings-transcript.pdf",
+            "source_url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2023/1st-quarter/1q23-earnings-transcript.pdf",
+            "notes": "First Quarter 2023 Financial Results Earnings Call Transcript"
+          }
+        ]
+      }
+    }
+  },
+ "hsbc": {
+    "bank_name": "HSBC Holdings plc",
+    "short_name": "HSBC",
+    "base_file_path": "bank_data/raw/HSBC",
+    "base_ir_url": "https://www.hsbc.com/investors/results-and-announcements/all-reporting",
+    "quarters": {
+      "2026-Q3": {
+        "reporting_period": "Third Quarter 2026",
+        "quarter_folder": "2026/3Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2026Q3_RESULTS_CALL",
+            "document_type": "Presentation_to_Analysts",
+            "transcript_format": "Hybrid_Presentation_and_QA",
+            "interaction_style": "scripted_plus_qa",
+            "requires_section_split": true,
+            "announcement_date": "2026-10-27",
+            "subfolder": "Results_calls",
+            "filename": "261028-3q-2026-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/3q/pdfs/hsbc-holdings-plc/261028-3q-2026-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Third Quarter 2026 Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2026Q3_EQUITY_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": true,
+            "announcement_date": "2026-11-04",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "261106-3q-2026-equity-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/3q/pdfs/hsbc-holdings-plc/261106-3q-2026-equity-analysts-meeting-transcript.pdf",
+            "notes": "Third Quarter 2026 Equity Analysts Meeting Transcript"
+          }
+        ]
+      },
+      "2026-Q2": {
+        "reporting_period": "Second Quarter 2026",
+        "quarter_folder": "2026/2Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2026Q2_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-08-04",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "260806-interim-results-2026-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/interim/pdfs/hsbc-holdings-plc/260806-interim-results-2026-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Second Quarter 2026 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2026Q2_RESULTS_FIXED_INCOME_CALL",
+            "document_type": "Fixed_income_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-08-04",
+            "subfolder": "Results_Fixed_Income_Call",
+            "filename": "260805-interim-results-2026-presentation-to-fixed-income-investors-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/interim/pdfs/hsbc-holdings-plc/260805-interim-results-2026-presentation-to-fixed-income-investors-transcript.pdf",
+            "notes": "Second Quarter 2026 Results Fixed Income Calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2026Q2_RESULTS_EQUITY_CALL",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-08-05",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "260806-interim-results-2026-equity-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/interim/pdfs/hsbc-holdings-plc/260806-interim-results-2026-equity-analysts-meeting-transcript.pdf",
+            "notes": "Second Quarter 2026 Equity Analysts Meeting Transcript"
+          },
+          {
+            "doc_id": "HSBC_2026Q2_POST_RESULTS_ANAYLST_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-08-02",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "260908-follow-up-interim-results-2026-equity-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/interim/pdfs/hsbc-holdings-plc/260908-follow-up-interim-results-2026-equity-analysts-meeting-transcript.pdf",
+            "notes": "Second Quarter 2026 Follow Up Equity Analysts Meeting Transcript"
+          }
+        ]
+      },
+    "2026-Q1": {
+        "reporting_period": "First Quarter 2026",
+        "quarter_folder": "2026/1Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2026Q1_RESULTS_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-05-05",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "250506-1q-2026-earnings-release-investors-and-analysts-call-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-holdings-plc/250506-1q-2026-earnings-release-investors-and-analysts-call-transcript.pdf",
+            "notes": "First Quarter 2026 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2026Q1_POST_RESULTS_ANAYLST_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-05-12",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "260516-hsbc-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-holdings-plc/260516-hsbc-analysts-meeting-transcript.pdf",
+            "notes": "First Quarter 2026 Follow UpEquity Analysts Meeting Transcript"
+          }
+        ]
+      },
+      "2025-Q4": {
+        "reporting_period": "Fourth Quarter 2025",
+        "quarter_folder": "2025/4Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2025Q4_ANNUAL_RESULTS_CALL",
+            "document_type": "Annual_Results_to_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-02-25",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "260226-annual-results-to-investors-and-analysts-transcript.pdf",
+            "source_url": "file:///Users/user/Dropbox/My%20Mac%20(MacBook%20Pro)/Downloads/260226-annual-results-to-investors-and-analysts-transcript.pdf",
+            "notes": "Fourth Quarter 2025 Annual Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2025Q4_ANNUAL_RESULTS_FIXED_INCOME_CALL",
+            "document_type": "Fixed_income_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-02-26",
+            "subfolder": "Results_Fixed_Income_Call",
+            "filename": "260303-hsbc-annual-results-fy25-fixed-income-call.pdf",
+            "source_url": "fhttps://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/annual/pdfs/hsbc-holdings-plc/260303-hsbc-annual-results-fy25-fixed-income-call.pdf",
+            "notes": "Fourth Quarter 2025 Annual Fixed Income Call Transcript"
+          },
+          {
+            "doc_id": "HSBC_2025Q4_POST_RESULTS_ANAYLST_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2026-02-27",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "2260310-fy-2025-equity-analysts-meeting-transcript.pdf",
+            "source_url":"https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/annual/pdfs/hsbc-holdings-plc/260310-fy-2025-equity-analysts-meeting-transcript.pdf",
+            "notes": "Fourth Quarter 2025 Post Annual Results Equity Analysts Meeting Transcript"
+          }
+        ]
+      },
+      "2025-Q3": {
+        "reporting_period": "Third Quarter 2025",
+        "quarter_folder": "2025/3Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2025Q3_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-10-28",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "251029-q3-results-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/3q/pdfs/hsbc-holdings-plc/251029-q3-results-to-investors-and-analysts-transcript.pdf",
+            "notes": "Third Quarter 2025 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2025Q3_POST_RESULTS_ANAYLST_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-11-04",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "251107-3q-2025-equity-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/3q/pdfs/hsbc-holdings-plc/251107-3q-2025-equity-analysts-meeting-transcript.pdf",
+            "notes": "Third Quarter 2025 Post Results Equity Analysts Meeting Transcript"
+          },
+          {
+            "doc_id": "HSBC_2025Q3_PRIVATISATION_OF_HANG_SENG_BANK_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-10-09",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "260516-hsbc-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-holdings-plc/260516-hsbc-analysts-meeting-transcript.pdf",
+            "notes": "Third Quarter 2025 Privatisation Of Hang Seng Bank Analyst And Investor Call Transcript"
+          }
+        ]
+      },
+      "2025-Q2": {
+        "reporting_period": "Second Quarter 2025",
+        "quarter_folder": "2025/2Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2025Q2_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-07-30",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "250731-interim-results-2025-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/interim/pdfs/hsbc-holdings-plc/250731-interim-results-2025-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Second Quarter 2025 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2025Q2_RESULTS_FIXED_INCOME_CALL",
+            "document_type": "Fixed_income_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-07-30",
+            "subfolder": "Results_Fixed_Income_Call",
+            "filename": "250731-interim-results-2025-presentation-to-fixed-income-investors-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/interim/pdfs/hsbc-holdings-plc/250731-interim-results-2025-presentation-to-fixed-income-investors-transcript.pdf",
+            "notes": "Second Quarter 2025 Results Fixed Income Calls Transcript"
+          }
+        ]
+      },
+      "2025-Q1": {
+        "reporting_period": "First Quarter 2025",
+        "quarter_folder": "2025/1Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2025Q1_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-04-29",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "250429-1q-2025-earnings-release-investors-and-analysts-call-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/1q/pdfs/hsbc-holdings-plc/250429-1q-2025-earnings-release-investors-and-analysts-call-transcript.pdf",
+            "notes": "First Quarter 2025 Results Investor and Analysts calls Transcript"
+          }
+        ]
+      },
+      "2024-Q4": {
+        "reporting_period": "Fourth Quarter 2024",
+        "quarter_folder": "2024/4Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2024Q4_ANNUAL_RESULTS_CALL",
+            "document_type": "Annual_Results_to_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-02-19",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "250220-annual-results-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/annual/pdfs/hsbc-holdings-plc/250220-annual-results-to-investors-and-analysts-transcript.pdf",
+            "notes": "Fourth Quarter 2024 Annual  Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2024Q4_ANNUAL_RESULTS_FIXED_INCOME_CALL",
+            "document_type": "Fixed_income_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-02-19",
+            "subfolder": "Results_Fixed_Income_Call",
+            "filename": "250221-fy-2024-fixed-income-investor-call-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/annual/pdfs/hsbc-holdings-plc/250221-fy-2024-fixed-income-investor-call-transcript.pdf",
+            "notes": "Fourth Quarter 2024 Annual Results Fixed Income Calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2024Q4_POST_RESULTS_ANAYLST_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2025-02-26",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "250228-fy-2024-equity-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/annual/pdfs/hsbc-holdings-plc/250228-fy-2024-equity-analysts-meeting-transcript.pdf",
+            "notes": "Fourth Quarter 2024 Post Annual Results Equity Analysts Meeting Transcript"
+          }
+        ]
+      },
+      "2024-Q3": {
+        "reporting_period": "Third Quarter 2024",
+        "quarter_folder": "2024/3Q",
+        "documents": [
+            {
+            "doc_id": "HSBC_2024Q3_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-10-29",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "241029-q3-results-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/3q/pdfs/hsbc-holdings-plc/241029-q3-results-to-investors-and-analysts-transcript.pdf",
+            "notes": "Third Quarter 2024 Results Investor and Analysts calls Transcript"
+          }
+        ]
+      },
+      "2024-Q2": {
+        "reporting_period": "Second Quarter 2024",
+        "quarter_folder": "2024/2Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2024Q2_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-07-31",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "240801-interim-results-2024-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/interim/pdfs/hsbc-holdings-plc/240801-interim-results-2024-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Second Quarter 2024 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2024Q2_RESULTS_FIXED_INCOME_CALL",
+            "document_type": "Fixed_income_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-07-31",
+            "subfolder": "Results_Fixed_Income_Call",
+            "filename": "240801-interim-results-2024-presentation-to-fixed-income-investors-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/interim/pdfs/hsbc-holdings-plc/240801-interim-results-2024-presentation-to-fixed-income-investors-transcript.pdf",
+            "notes": "Second Quarter 2024 Results Fixed Income Calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2024Q2_POST_RESULTS_ANAYLST_MEETING",
+            "document_type": "Equity_Analysts_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-08-02",
+            "subfolder": "Equity_analysts_meetings",
+            "filename": "240806-interim-results-2024-equity-analysts-meeting-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/interim/pdfs/hsbc-holdings-plc/240806-interim-results-2024-equity-analysts-meeting-transcript.pdf",
+            "notes": "Second Quarter 2024 Post Results Equity Analysts Meeting Transcript"
+          }
+        ]
+      },
+      "2024-Q1": {
+        "reporting_period": "First Quarter 2024",
+        "quarter_folder": "2024/1Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2024Q1_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-04-30",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "240502-1q-2024-hsbc-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2024/1q/pdfs/hsbc-holdings-plc/240502-1q-2024-hsbc-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "First Quarter 2024 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2024Q1_AGREEMENT_TO_SELL_HSBC_IN_ARGENTINA_TO_GRUPO_FINANCIERO_GA_LICIA_CALL",
+            "document_type": "Aggreement_Meeting",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-04-09",
+            "subfolder": "Agreement_meetings",
+            "filename": "240409-agreement-to-sell-hsbc-in-argentina-to-grupo-financiero-ga-licia-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/investing-in-hsbc/all-reporting/group/2024/240409-agreement-to-sell-hsbc-in-argentina-to-grupo-financiero-ga-licia-transcript.pdf",
+            "notes": "First Quarter 2024 Agreement Transcript"
+          }
+        ]
+      },
+      "2023-Q4": {
+        "reporting_period": "Fourth Quarter 2023",
+        "quarter_folder": "2023/4Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2023Q4__ANNUAL_RESULTS_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2024-02-21",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "240222-annual-results-2023-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/annual/pdfs/hsbc-holdings-plc/240222-annual-results-2023-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Fourth Quarter 2023 Annual Results Investor and Analysts calls Transcript"
+          }
+        ]
+      },
+      "2023-Q3": {
+        "reporting_period": "Third Quarter 2023",
+        "quarter_folder": "2023/1Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2023Q1_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2023-05-30",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "231030-3q-2023-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/3q/pdfs/hsbc-holdings-plc/231030-3q-2023-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Third Quarter 2023 Results Investor and Analysts calls Transcript"
+          }
+        ]
+      },
+      "2023-Q2": {
+        "reporting_period": "Second Quarter 2023",
+        "quarter_folder": "2023/2Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2023Q2_INTERN_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2023-07-01",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "230802-interim-results-2023-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/interim/pdfs/hsbc-holdings-plc/230802-interim-results-2023-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "Second Quarter 2023 Results Investor and Analysts calls Transcript"
+          },
+          {
+            "doc_id": "HSBC_2023Q2_RESULTS_FIXED_INCOME_CALL",
+            "document_type": "Fixed_income_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2023-08-05",
+            "subfolder": "Results_Fixed_Income_Call",
+            "filename": "230908-interim-results-2023-fixed-income-investors-conference-call-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/interim/pdfs/hsbc-holdings-plc/230908-interim-results-2023-fixed-income-investors-conference-call-transcript.pdf",
+            "notes": "Second Quarter 2023 Results Fixed Income Calls Transcript"
+          }
+        ]
+      },
+      "2023-Q1": {
+        "reporting_period": "First Quarter 2023",
+        "quarter_folder": "2023/1Q",
+        "documents": [
+          {
+            "doc_id": "HSBC_2023Q1_RESULTS_ANALYST_AND_INVESTOR_CALL",
+            "document_type": "Results_analyst_and_investor_call",
+            "transcript_format":"QA",
+            "interaction_style": "qa",
+            "requires_section_split": false,
+            "announcement_date": "2023-05-02",
+            "subfolder": "Results_A_And_I_calls",
+            "filename": "230502-1q-2023-hsbc-presentation-to-investors-and-analysts-transcript.pdf",
+            "source_url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2023/1q/pdfs/hsbc-holdings-plc/230502-1q-2023-hsbc-presentation-to-investors-and-analysts-transcript.pdf",
+            "notes": "First Quarter 2023 Results Investor and Analysts calls Transcript"
+          }
+        ]
+      }
+    }
+  }
+}
+
